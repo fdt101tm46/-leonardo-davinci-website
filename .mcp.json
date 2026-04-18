@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "magic": {
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": ["C:\\Users\\ODINA\\AppData\\Roaming\\npm\\node_modules\\@21st-dev\\magic\\dist\\index.js"],
+      "env": {
+        "API_KEY": "bbd6890e2fdd3850ae1667b92fd8f8fa2cf4c4e8e979fbe5903e233614d83e93"
+      }
+    }
+  }
+}

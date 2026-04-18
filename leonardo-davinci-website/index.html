@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonardo da Vinci — Artist. Scientist. Visionary.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="nav-logo-l">L</span>
+        <span class="nav-logo-sep"> · </span>
+        <span class="nav-logo-rest">da Vinci</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#inventions">Inventions</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+
+    <!-- WebGL animated shader background (port of animated-shader-hero) -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Vitruvian rings removed — WebGL shader provides visual depth -->
+
+    <!-- Diagonal rule lines (Da Vinci notebook feel) -->
+    <div class="hero-rules" aria-hidden="true"></div>
+
+    <!-- Gold dust particles -->
+    <div class="hero-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <!-- Eyebrow — word-by-word Digital Serenity animation -->
+      <p class="hero-eyebrow">
+        <span class="word-anim" style="--wd:0">1452</span>
+        <span class="word-anim" style="--wd:1">–</span>
+        <span class="word-anim" style="--wd:2">1519</span>
+        <span class="word-anim" style="--wd:3">&nbsp;·&nbsp;</span>
+        <span class="word-anim" style="--wd:4">Vinci,</span>
+        <span class="word-anim" style="--wd:5">Republic</span>
+        <span class="word-anim" style="--wd:6">of</span>
+        <span class="word-anim" style="--wd:7">Florence</span>
+      </p>
+
+      <!-- Title — word-by-word -->
+      <h1 class="hero-title">
+        <span class="word-anim" style="--wd:9">Leonardo</span><br />
+        <em><span class="word-anim" style="--wd:12">da</span> <span class="word-anim" style="--wd:14">Vinci</span></em>
+      </h1>
+
+      <!-- Tagline — word-by-word -->
+      <p class="hero-tagline">
+        <span class="word-anim" style="--wd:16">Artist</span>
+        <span class="word-anim" style="--wd:18">&nbsp;·&nbsp;</span>
+        <span class="word-anim" style="--wd:19">Scientist</span>
+        <span class="word-anim" style="--wd:21">&nbsp;·&nbsp;</span>
+        <span class="word-anim" style="--wd:22">Visionary</span>
+      </p>
+
+      <!-- Rotating quotes -->
+      <div class="hero-quotes fade-up" aria-live="polite">
+        <blockquote class="hero-quote active">"Learning never exhausts the mind."</blockquote>
+        <blockquote class="hero-quote">"Simplicity is the ultimate sophistication."</blockquote>
+        <blockquote class="hero-quote">"The noblest pleasure is the joy of understanding."</blockquote>
+        <blockquote class="hero-quote">"Art is never finished, only abandoned."</blockquote>
+        <blockquote class="hero-quote">"Where the spirit does not work with the hand, there is no art."</blockquote>
+      </div>
+
+      <div class="hero-actions fade-up">
+
+        <!-- MetalButton — gold variant (port of MetalButton gold) -->
+        <div class="metal-btn-wrap">
+          <div class="metal-btn-inner" aria-hidden="true"></div>
+          <a href="#about" class="metal-btn">Explore the Legacy</a>
+        </div>
+
+        <!-- LiquidButton — glass pill (port of LiquidButton) -->
+        <a href="#works" class="liquid-hero-btn">View Masterworks</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Man</span>
+        <h2 class="section-title">A Mind Beyond His Time</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-image reveal">
+          <div class="portrait-frame">
+            <img src="self-portrait.jpg" alt="Leonardo da Vinci Self-Portrait, c. 1512" class="about-img" />
+            <div class="portrait-frame-border" aria-hidden="true"></div>
+          </div>
+          <div class="portrait-placard">
+            <span class="portrait-placard-name">Leonardo da Vinci</span>
+            <span class="portrait-placard-detail">Self-Portrait · c. 1512 · Red chalk on paper</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal delay-1">
+          <p class="lead">Born on April 15, 1452, in the small Tuscan town of Vinci, Leonardo di ser Piero da Vinci would grow to become perhaps the most diversely talented individual ever to have lived.</p>
+          <p>The illegitimate son of a Florentine notary and a peasant woman, Leonardo's early years were spent in the rolling hills of Tuscany — a landscape that would forever colour his perception of the natural world. Apprenticed at fourteen to the renowned sculptor and painter Andrea del Verrocchio in Florence, he quickly surpassed his master — Verrocchio reportedly vowed never to paint again after witnessing the young Leonardo's brushwork on a collaborative commission.</p>
+          <p>What set Leonardo apart was his insatiable curiosity. While his contemporaries mastered one discipline, Leonardo moved fluidly between painting, sculpture, architecture, music, mathematics, engineering, geology, botany, cartography, and anatomy. He dissected over thirty human corpses to understand the body he painted, designed war machines decades ahead of their construction, and sketched flying machines that prefigured modern aircraft by four centuries.</p>
+          <p>He worked for the Duke of Milan, the Pope, and the King of France — yet he left many of his greatest works unfinished, always lured toward the next question, the next discovery. He died on May 2, 1519, in Amboise, France, reportedly in the arms of King Francis I.</p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">7,200+</span>
+              <span class="stat-label">Pages of Notebooks</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Surviving Paintings</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">67</span>
+              <span class="stat-label">Years of Life</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       WORKS / GALLERY
+  ═══════════════════════════════════════════════ -->
+  <section id="works" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Portfolio</span>
+        <h2 class="section-title">Masterworks</h2>
+        <p class="section-sub">A selection of Leonardo's most celebrated paintings — each a window into a mind that saw the world differently. Click any work to view it in the gallery.</p>
+      </div>
+
+      <!-- 21st.dev Card Hover style — grayscale→colour + image grows + gold placard -->
+      <div class="works-grid" id="works-grid">
+
+        <article class="work-card reveal" tabindex="0"
+          data-img="mona-lisa.jpg"
+          data-title="Mona Lisa"
+          data-year="c. 1503 – 1519"
+          data-medium="Oil on poplar panel · 77 × 53 cm · Musée du Louvre, Paris"
+          data-desc="Arguably the most famous painting in the world, the Mona Lisa captivates with her enigmatic smile and Leonardo's pioneering use of sfumato — a technique of soft, blended transitions between light and shadow that gives the figure an almost living quality.">
+          <div class="work-card-frame">
+            <div class="work-img-container">
+              <img src="mona-lisa.jpg" alt="Mona Lisa by Leonardo da Vinci" class="work-img" loading="lazy" />
+              <div class="work-overlay" aria-hidden="true">
+                <h3 class="work-overlay-title">Mona Lisa</h3>
+                <p class="work-overlay-artist">Leonardo da Vinci</p>
+                <button class="work-gallery-btn" tabindex="-1">Open in Gallery</button>
+              </div>
+            </div>
+          </div>
+          <div class="work-placard">
+            <h3 class="work-title">Mona Lisa</h3>
+            <p class="work-placard-details">Leonardo da Vinci<br />c. 1503–1519 &nbsp;·&nbsp; Oil on poplar panel</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal delay-1" tabindex="0"
+          data-img="last-supper.jpg"
+          data-title="The Last Supper"
+          data-year="c. 1495 – 1498"
+          data-medium="Tempera on gesso · 460 × 880 cm · Santa Maria delle Grazie, Milan"
+          data-desc="Painted on the refectory wall of Santa Maria delle Grazie, this monumental mural captures the moment Christ announces one of his apostles will betray him. Leonardo's masterful composition places each disciple in a uniquely expressive reaction, creating a symphony of human emotion.">
+          <div class="work-card-frame">
+            <div class="work-img-container">
+              <img src="last-supper.jpg" alt="The Last Supper by Leonardo da Vinci" class="work-img" loading="lazy" />
+              <div class="work-overlay" aria-hidden="true">
+                <h3 class="work-overlay-title">The Last Supper</h3>
+                <p class="work-overlay-artist">Leonardo da Vinci</p>
+                <button class="work-gallery-btn" tabindex="-1">Open in Gallery</button>
+              </div>
+            </div>
+          </div>
+          <div class="work-placard">
+            <h3 class="work-title">The Last Supper</h3>
+            <p class="work-placard-details">Leonardo da Vinci<br />c. 1495–1498 &nbsp;·&nbsp; Tempera on gesso</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal" tabindex="0"
+          data-img="vitruvian-man.jpg"
+          data-title="Vitruvian Man"
+          data-year="c. 1490"
+          data-medium="Pen and ink on paper · 34 × 26 cm · Gallerie dell'Accademia, Venice"
+          data-desc="More than a drawing — a philosophical statement. Based on the writings of Roman architect Vitruvius, this iconic image explores the relationship between ideal human proportions and geometry, placing man quite literally at the intersection of art and science.">
+          <div class="work-card-frame">
+            <div class="work-img-container">
+              <img src="vitruvian-man.jpg" alt="Vitruvian Man by Leonardo da Vinci" class="work-img" loading="lazy" />
+              <div class="work-overlay" aria-hidden="true">
+                <h3 class="work-overlay-title">Vitruvian Man</h3>
+                <p class="work-overlay-artist">Leonardo da Vinci</p>
+                <button class="work-gallery-btn" tabindex="-1">Open in Gallery</button>
+              </div>
+            </div>
+          </div>
+          <div class="work-placard">
+            <h3 class="work-title">Vitruvian Man</h3>
+            <p class="work-placard-details">Leonardo da Vinci<br />c. 1490 &nbsp;·&nbsp; Pen and ink on paper</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal delay-1" tabindex="0"
+          data-img="lady-ermine.jpg"
+          data-title="Lady with an Ermine"
+          data-year="c. 1489 – 1490"
+          data-medium="Oil on walnut panel · 54 × 40 cm · Czartoryski Museum, Kraków"
+          data-desc="A portrait of Cecilia Gallerani, the young mistress of Ludovico Sforza, Duke of Milan. The ermine she holds is thought to be a symbol of purity and was also a Sforza emblem. Leonardo's three-quarter pose and psychological depth were revolutionary for portraiture of the era.">
+          <div class="work-card-frame">
+            <div class="work-img-container">
+              <img src="lady-ermine.jpg" alt="Lady with an Ermine by Leonardo da Vinci" class="work-img" loading="lazy" />
+              <div class="work-overlay" aria-hidden="true">
+                <h3 class="work-overlay-title">Lady with an Ermine</h3>
+                <p class="work-overlay-artist">Leonardo da Vinci</p>
+                <button class="work-gallery-btn" tabindex="-1">Open in Gallery</button>
+              </div>
+            </div>
+          </div>
+          <div class="work-placard">
+            <h3 class="work-title">Lady with an Ermine</h3>
+            <p class="work-placard-details">Leonardo da Vinci<br />c. 1489–1490 &nbsp;·&nbsp; Oil on walnut panel</p>
+          </div>
+        </article>
+
+
+        <article class="work-card reveal delay-1" tabindex="0"
+          data-img="virgin-rocks.jpg"
+          data-title="Virgin of the Rocks"
+          data-year="c. 1483 – 1486"
+          data-medium="Oil on panel · 199 × 122 cm · Musée du Louvre, Paris"
+          data-desc="One of Leonardo's most mysterious works, set in a grotto of dark volcanic rock. The figures are arranged in a triangular composition of rare stability, while the surrounding landscape — with its botanical precision and geological drama — reveals Leonardo the scientist at work within Leonardo the artist.">
+          <div class="work-card-frame">
+            <div class="work-img-container">
+              <img src="virgin-rocks.jpg" alt="Virgin of the Rocks by Leonardo da Vinci" class="work-img" loading="lazy" />
+              <div class="work-overlay" aria-hidden="true">
+                <h3 class="work-overlay-title">Virgin of the Rocks</h3>
+                <p class="work-overlay-artist">Leonardo da Vinci</p>
+                <button class="work-gallery-btn" tabindex="-1">Open in Gallery</button>
+              </div>
+            </div>
+          </div>
+          <div class="work-placard">
+            <h3 class="work-title">Virgin of the Rocks</h3>
+            <p class="work-placard-details">Leonardo da Vinci<br />c. 1483–1486 &nbsp;·&nbsp; Oil on panel</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal delay-1" tabindex="0"
+          data-img="portrait-of-a-musician.jpg"
+          data-title="Portrait of a Musician"
+          data-year="c. 1486 – 1487"
+          data-medium="Oil on walnut panel · 45 × 32 cm · Pinacoteca Ambrosiana, Milan"
+          data-desc="The only known portrait by Leonardo of a male subject, believed to depict Franchino Gaffurio, choirmaster of Milan Cathedral. The subject's intense gaze and the sheet of music he holds reveal Leonardo's unmatched ability to capture intellect and inner life in a single glance.">
+          <div class="work-card-frame">
+            <div class="work-img-container">
+              <img src="portrait-of-a-musician.jpg" alt="Portrait of a Musician by Leonardo da Vinci" class="work-img" loading="lazy" />
+              <div class="work-overlay" aria-hidden="true">
+                <h3 class="work-overlay-title">Portrait of a Musician</h3>
+                <p class="work-overlay-artist">Leonardo da Vinci</p>
+                <button class="work-gallery-btn" tabindex="-1">Open in Gallery</button>
+              </div>
+            </div>
+          </div>
+          <div class="work-placard">
+            <h3 class="work-title">Portrait of a Musician</h3>
+            <p class="work-placard-details">Leonardo da Vinci<br />c. 1486–1487 &nbsp;·&nbsp; Oil on walnut panel</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       INVENTIONS
+  ═══════════════════════════════════════════════ -->
+  <section id="inventions" class="section section-blueprint">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Engineer</span>
+        <h2 class="section-title">Ahead of His Time</h2>
+        <p class="section-sub">Long before the Industrial Revolution, Leonardo conceived machines that would not exist for centuries. His notebooks are full of blueprints that the world was not yet ready to build.</p>
+      </div>
+      <div class="inventions-grid">
+
+        <div class="invention-card reveal">
+          <div class="invention-img-wrap">
+            <img src="flying-machine.jpg" alt="Leonardo da Vinci flying machine sketch from Codex Atlanticus" class="invention-img-real" loading="lazy" />
+          </div>
+          <div class="invention-card-body">
+            <div class="invention-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                <path d="M12 2L8 8H2l5 4-2 7 7-4 7 4-2-7 5-4h-6L12 2z"/>
+              </svg>
+            </div>
+            <h3>Ornithopter (Flying Machine)</h3>
+            <p>Inspired by the flight of birds and bats, Leonardo designed a human-powered flying machine with wings that flapped mechanically. Though never built in his lifetime, the principles he documented anticipated modern understanding of aerodynamics by over 400 years.</p>
+          </div>
+        </div>
+
+        <div class="invention-card reveal delay-1">
+          <div class="invention-img-wrap">
+            <img src="armored-vehicle.jpg" alt="Leonardo da Vinci armoured vehicle sketch" class="invention-img-real" loading="lazy" />
+          </div>
+          <div class="invention-card-body">
+            <div class="invention-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                <rect x="4" y="10" width="16" height="8" rx="1"/>
+                <circle cx="8" cy="18" r="2"/><circle cx="16" cy="18" r="2"/>
+                <path d="M4 14h16M8 10V6l4-2 4 2v4"/>
+              </svg>
+            </div>
+            <h3>Armoured Vehicle</h3>
+            <p>Designed around 1487 for Ludovico Sforza, Leonardo's armoured vehicle featured a circular, shell-like exterior with cannons pointing in all directions. Often cited as a precursor to the modern tank, it was designed to frighten and disorient enemy forces as much as to destroy them.</p>
+          </div>
+        </div>
+
+        <div class="invention-card reveal">
+          <div class="invention-img-wrap">
+            <img src="aerial-screw.jpg" alt="Leonardo da Vinci aerial screw helicopter sketch" class="invention-img-real" loading="lazy" />
+          </div>
+          <div class="invention-card-body">
+            <div class="invention-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                <path d="M12 2v8M8 6l4-4 4 4"/>
+                <ellipse cx="12" cy="14" rx="6" ry="3"/>
+                <path d="M6 14v4a6 3 0 0 0 12 0v-4"/>
+              </svg>
+            </div>
+            <h3>Aerial Screw (Helicopter)</h3>
+            <p>Leonardo's aerial screw, sketched around 1489, was designed to compress air to obtain flight — the same principle behind the modern helicopter rotor. He imagined it made of linen stiffened with starch, driven by four men running on the platform below. A remarkable leap of imagination.</p>
+          </div>
+        </div>
+
+        <div class="invention-card reveal delay-1">
+          <div class="invention-img-wrap">
+            <img src="robotic-knight.jpg" alt="Leonardo da Vinci robotic knight design" class="invention-img-real" loading="lazy" />
+          </div>
+          <div class="invention-card-body">
+            <div class="invention-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                <circle cx="12" cy="8" r="3"/>
+                <path d="M9 11v2l-2 2v2h10v-2l-2-2v-2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3>Robotic Knight</h3>
+            <p>Around 1495, Leonardo designed what may be the world's first humanoid robot — an armoured knight capable of sitting, standing, raising its visor, and moving its arms. Operated by a system of pulleys and cables, it was likely built for court entertainment and demonstrates his mastery of anatomy and mechanics in one.</p>
+          </div>
+        </div>
+
+        <div class="invention-card reveal">
+          <div class="invention-img-wrap">
+            <img src="solar-power.jpg" alt="Leonardo da Vinci notebook sketch" class="invention-img-real" loading="lazy" />
+          </div>
+          <div class="invention-card-body">
+            <div class="invention-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                <path d="M3 12h4l3-9 4 18 3-9h4"/>
+              </svg>
+            </div>
+            <h3>Solar Power Concentrator</h3>
+            <p>Leonardo designed a system of concave mirrors to concentrate sunlight and heat water — an early vision of solar thermal energy. He calculated angles and curvatures with geometric precision, conceiving of renewable energy harvesting centuries before it became an environmental necessity.</p>
+          </div>
+        </div>
+
+        <div class="invention-card reveal delay-1">
+          <div class="invention-img-wrap">
+            <img src="parachute.jpg" alt="Leonardo da Vinci parachute sketch" class="invention-img-real" loading="lazy" />
+          </div>
+          <div class="invention-card-body">
+            <div class="invention-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3>Parachute</h3>
+            <p>Leonardo sketched a pyramid-shaped parachute in 1485 — over 300 years before the first successful parachute jump. He described it as "a tent made of linen" that would allow a man to jump from any height without danger. In 2000, a skydiver successfully used a replica of Leonardo's design to land safely.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       BLOG
+  ═══════════════════════════════════════════════ -->
+  <section id="blog" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Writings</span>
+        <h2 class="section-title">From the Blog</h2>
+        <p class="section-sub">Reflections on Leonardo's legacy, his methods, and what his life means for us today.</p>
+      </div>
+      <div class="blog-grid">
+
+        <!-- Blog Post 1 -->
+        <a href="blog-1.html" class="blog-card reveal">
+          <div class="blog-card-banner" aria-hidden="true"></div>
+          <div class="blog-card-top">
+            <div class="blog-meta">
+              <span class="blog-date">April 15, 2025</span>
+              <span class="blog-tag">Legacy</span>
+            </div>
+            <h2 class="blog-title">Leonardo da Vinci: The Original Renaissance Man</h2>
+            <div class="blog-excerpt">
+              <p>There is a word we reach for when someone excels across many fields: Renaissance Man. It is not a coincidence that this phrase was coined for an era — and for a man. Leonardo da Vinci did not merely participate in the Renaissance; in many ways, he embodied it.</p>
+            </div>
+          </div>
+          <span class="read-more-btn">Read Full Post →</span>
+        </a>
+
+        <!-- Blog Post 2 -->
+        <a href="blog-2.html" class="blog-card reveal delay-1">
+          <div class="blog-card-banner" aria-hidden="true"></div>
+          <div class="blog-card-top">
+            <div class="blog-meta">
+              <span class="blog-date">March 3, 2025</span>
+              <span class="blog-tag">Notebooks</span>
+            </div>
+            <h2 class="blog-title">How Da Vinci's Notebooks Changed the World</h2>
+            <div class="blog-excerpt">
+              <p>Imagine finding a locked box containing the private thoughts, sketches, and observations of the greatest mind of the Renaissance. That is, in essence, what Leonardo's notebooks are — and their rediscovery has shaped science, art, and philosophy for five centuries.</p>
+            </div>
+          </div>
+          <span class="read-more-btn">Read Full Post →</span>
+        </a>
+
+        <!-- Blog Post 3 -->
+        <a href="blog-3.html" class="blog-card reveal">
+          <div class="blog-card-banner" aria-hidden="true"></div>
+          <div class="blog-card-top">
+            <div class="blog-meta">
+              <span class="blog-date">February 10, 2025</span>
+              <span class="blog-tag">Art &amp; Science</span>
+            </div>
+            <h2 class="blog-title">Seeing What Others Cannot: Leonardo's Art of Observation</h2>
+            <div class="blog-excerpt">
+              <p>Before Leonardo could paint a wave, he studied how water moves. Before he could render a hand, he dissected one. His art was inseparable from his science — and that is precisely what made it immortal.</p>
+            </div>
+          </div>
+          <span class="read-more-btn">Read Full Post →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONNECT / SOCIAL MEDIA
+  ═══════════════════════════════════════════════ -->
+  <section id="connect" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Follow the Journey</span>
+        <h2 class="section-title">Stay Connected</h2>
+        <p class="section-sub">If Leonardo were alive today, where would you find him? Follow along as we explore his ideas, works, and ongoing legacy across social media.</p>
+      </div>
+      <div class="social-grid reveal">
+
+        <a href="https://www.instagram.com/leo.da.vinci.ins?igsh=bWRyMDQ0OHFwenVr" target="_blank" rel="noopener" class="social-card" aria-label="Instagram">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span class="social-platform">Instagram</span>
+            <span class="social-handle">@leo.da.vinci.ins</span>
+            <span class="social-desc">Behind-the-canvas sketches, notebook pages, and studio life from 15th-century Florence.</span>
+          </div>
+          <span class="social-arrow">→</span>
+        </a>
+
+        <a href="#" class="social-card" aria-label="Twitter / X">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span class="social-platform">X (Twitter)</span>
+            <span class="social-handle">@daVinci_Genius</span>
+            <span class="social-desc">Daily observations on nature, science, and art. "Simplicity is the ultimate sophistication."</span>
+          </div>
+          <span class="social-arrow">→</span>
+        </a>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">L · da Vinci</span>
+          <p>A tribute to the world's greatest polymath. This website was created as an academic project exploring digital identity and personal branding through the life of a person admired across the centuries.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#inventions">Inventions</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#connect">Connect</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <h4>Academic Note</h4>
+          <p>This site was created for COS003 – Introduction to Social and Digital Media, TMC Institute, Semester 2, 2025–2026.</p>
+          <p class="footer-credits">Images sourced from Wikimedia Commons and open-licence archives. All historical content for academic use.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Leonardo da Vinci Tribute. Created for educational purposes.</p>
+        <p>Image sources: Wikimedia Commons (Public Domain).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       LIGHTBOX
+  ═══════════════════════════════════════════════ -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-labelledby="lb-title-el" aria-modal="true">
+    <div class="lb-bg" id="lb-bg"></div>
+
+    <button class="lb-close" id="lb-close" aria-label="Close gallery viewer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Previous artwork">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <button class="lb-arrow lb-next" id="lb-next" aria-label="Next artwork">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+
+    <div class="lb-content">
+      <div class="lb-img-wrap">
+        <img id="lb-img" src="" alt="" class="lb-image" />
+      </div>
+      <div class="lb-caption">
+        <span id="lb-counter" class="lb-counter">1 / 6</span>
+        <span id="lb-year-el" class="lb-caption-year"></span>
+        <h2 id="lb-title-el" class="lb-caption-title"></h2>
+        <p id="lb-medium-el" class="lb-caption-medium"></p>
+        <div class="lb-rule"></div>
+        <p id="lb-desc-el" class="lb-caption-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Liquid Glass SVG filter (21st.dev Liquid Glass component) -->
+  <svg style="display:none" aria-hidden="true">
+    <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+      <feTurbulence type="fractalNoise" baseFrequency="0.001 0.005" numOctaves="1" seed="17" result="turbulence"/>
+      <feComponentTransfer in="turbulence" result="mapped">
+        <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5"/>
+        <feFuncG type="gamma" amplitude="0" exponent="1" offset="0"/>
+        <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5"/>
+      </feComponentTransfer>
+      <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap"/>
+      <feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100" lightingColor="rgba(202,138,4,0.6)" result="specLight">
+        <fePointLight x="-200" y="-200" z="300"/>
+      </feSpecularLighting>
+      <feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage"/>
+      <feDisplacementMap in="SourceGraphic" in2="softMap" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>

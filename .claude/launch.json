@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Leonardo da Vinci Website (Python)",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "3000", "--directory", "leonardo-davinci-website"],
+      "port": 3000
+    },
+    {
+      "name": "Leonardo da Vinci Website (Node / npx serve)",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "leonardo-davinci-website", "-l", "3001", "--no-clipboard"],
+      "port": 3001
+    }
+  ]
+}

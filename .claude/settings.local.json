@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"C:\\\\Users\\\\ODINA\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"renaissance tribute portfolio luxury dark elegant historical art\" --design-system -p \"Leonardo da Vinci\")",
+      "Bash(python \"C:\\\\Users\\\\ODINA\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"elegant serif luxury dark gold historical\" --domain typography)",
+      "Bash(python \"C:\\\\Users\\\\ODINA\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"layout responsive landing hero gallery\" --stack html-tailwind)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\my laptop\\\\Claude skills\\\\Website generation\\\\leonardo-davinci-website\\\\download-images.ps1\")",
+      "Bash(npx --version)",
+      "Read(//c/Users/ODINA/**)",
+      "Bash(npx -y @21st-dev/magic@latest)",
+      "Bash(where npx:*)",
+      "Bash(where node:*)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Bash(where magic:*)",
+      "Bash(cmd /c \"C:\\\\Users\\\\ODINA\\\\AppData\\\\Roaming\\\\npm\\\\magic.cmd\")",
+      "Bash(node -e \"console.log\\(require\\('C:/Users/ODINA/AppData/Roaming/npm/node_modules/@21st-dev/magic/package.json'\\).bin\\)\")",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\ODINA\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\@21st-dev\\\\magic\\\\dist\\\\index.js\")",
+      "Bash(claude --version)",
+      "Bash(npx @anthropic-ai/claude-code --version)",
+      "Bash(\"C:\\\\Users\\\\ODINA\\\\AppData\\\\Roaming\\\\npm\\\\magic.cmd\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python \"C:\\\\Users\\\\ODINA\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"hero landing dark luxury animated quote historical\" --domain style -n 3)",
+      "Bash(claude mcp:*)",
+      "mcp__magic__21st_magic_component_inspiration",
+      "Bash(grep -E '\\\\.\\(jpg|jpeg|png|webp\\)$')",
+      "Bash(powershell -Command 'Get-ChildItem '\\\\''C:\\\\my laptop\\\\Claude skills\\\\Website generation\\\\leonardo-davinci-website\\\\*.jpg'\\\\'' | Select-Object Name, @{N='\\\\''KB'\\\\'';E={[math]::Round\\($_.Length/1KB,1\\)}} | Sort-Object KB')",
+      "Bash(powershell -Command 'Get-ChildItem '\\\\''C:\\\\my laptop\\\\Claude skills\\\\Website generation\\\\leonardo-davinci-website\\\\*.jpg'\\\\'' | Select-Object Name, Length | Where-Object { $_.Length -lt 10000 }')",
+      "Bash(powershell -Command 'Get-ChildItem '\\\\''C:\\\\my laptop\\\\Claude skills\\\\Website generation\\\\leonardo-davinci-website\\\\*.jpg'\\\\'' | Select-Object Name, @{N='\\\\''KB'\\\\'';E={[math]::Round\\($_.Length/1KB,1\\)}} | Format-Table -AutoSize')"
+    ]
+  }
+}
